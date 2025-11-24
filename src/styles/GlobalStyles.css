@@ -1,0 +1,1045 @@
+:root {
+  --primary-blue: #1a365d;
+  --secondary-blue: #2d3748;
+  --accent-gold: #d4af37;
+  --text-light: #f7fafc;
+  --text-dark: #2d3748;
+  --bg-light: #f8f9fa;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.btn-custom-primary {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: var(--text-light);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-custom-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  color: var(--text-light);
+}
+
+.btn-custom-success {
+  background: var(--accent-gold);
+  color: var(--primary-blue);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-custom-success:hover {
+  background: #e6c34c;
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+}
+
+.service-card {
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  min-height: 280px;
+  border-radius: 15px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--primary-blue);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-gold);
+}
+
+.text-primary-custom {
+  color: var(--primary-blue) !important;
+}
+
+.text-accent {
+  color: var(--accent-gold) !important;
+}
+
+.bg-light-custom {
+  background-color: var(--bg-light) !important;
+}
+/* Additional styles for About page */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 54, 93, 0.1);
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Value cards hover effect */
+.bg-secondary.bg-opacity-25 {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-secondary.bg-opacity-25:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-5px);
+}
+
+/* Facility counters */
+.display-6 {
+  font-size: 2.5rem;
+}
+
+/* Operating hours box */
+.bg-primary-custom {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)) !important;
+}
+
+/* Service icons animation */
+.service-icon {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  color: var(--primary-blue);
+}
+
+/* Section spacing improvements */
+.section-padding {
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .display-5 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced card shadows */
+.service-card {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+/* Services List Styles */
+.services-list {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-item {
+  padding: 1.5rem 0;
+}
+
+.service-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.service-icon-container {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-gold), #e6c34c);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.service-tick {
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.service-icon-container::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(135deg, var(--accent-gold), var(--primary-blue));
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.service-text {
+  flex: 1;
+}
+
+.service-title {
+  color: var(--primary-blue);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.service-description {
+  color: var(--secondary-blue);
+  margin-bottom: 0;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.service-divider {
+  margin: 0;
+  border: none;
+  border-top: 2px solid #e9ecef;
+  opacity: 0.6;
+}
+
+/* Hover Effects */
+.service-item:hover .service-icon-container {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.service-item:hover .service-title {
+  color: var(--accent-gold);
+  transition: color 0.3s ease;
+}
+
+/* Animation for service items */
+.service-item {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-list {
+    padding: 1.5rem;
+    margin: 0 -15px;
+    border-radius: 10px;
+  }
+  
+  .service-content {
+    gap: 1rem;
+  }
+  
+  .service-icon-container {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .service-tick {
+    font-size: 1.2rem;
+  }
+  
+  .service-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Enhanced animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.service-item:hover .service-icon-container::before {
+  animation: pulse 2s infinite;
+}
+
+/* Optional: Add connecting lines for visual flow */
+.services-list {
+  position: relative;
+}
+
+.services-list::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    var(--accent-gold) 20%, 
+    var(--accent-gold) 80%, 
+    transparent 100%);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.service-icon-container {
+  position: relative;
+  z-index: 2;
+}
+/* Facilities Section - Single Line Design */
+.facilities-single-line {
+  background: transparent;
+  padding: 0;
+}
+
+.facility-item-single {
+  padding: 1.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.facility-item-single:hover {
+  transform: translateY(-5px);
+}
+
+.facility-number-single {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.facility-label-single {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-blue);
+  margin-bottom: 0;
+}
+
+.facility-divider-single {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #dee2e6 20%,
+    #dee2e6 80%,
+    transparent 100%
+  );
+  margin: 0 2rem;
+}
+
+/* Hover Effects */
+.facility-item-single:hover .facility-number-single {
+  color: var(--accent-gold);
+}
+
+.operating-hours-text {
+  font-weight: 400; /* Normal weight */
+  /* or */
+  font-weight: 200; /* Light weight */
+}
+/* Services Section - Blue Circle Ticks */
+.service-icon-container-blue {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  background: white;
+  border: 2px solid var(--primary-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.service-tick-blue {
+  font-size: 1.3rem;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+/* Hover Effects for Blue Ticks - NO COLOR CHANGE */
+.service-item:hover .service-icon-container-blue {
+  transform: scale(1.1);
+ 
+}
+
+/* Home Page Services Section */
+
+
+.service-icon-container-home i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Service Card Improvements */
+.service-card {
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  min-height: 380px;
+  border-radius: 15px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+/* Left Alignment for Card Content */
+.service-card .card-body {
+  text-align: left;
+}
+
+.service-card .card-title {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.service-card .card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-icon-container-home {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .service-icon-container-home i {
+    font-size: 1.5rem;
+  }
+  
+  .service-card {
+    min-height: 350px;
+  }
+  
+  .service-card .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive Design for Blue Ticks */
+@media (max-width: 768px) {
+  .service-icon-container-blue {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .service-tick-blue {
+    font-size: 1.1rem;
+  }
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+  .facility-item-single {
+    padding: 1rem 0.5rem;
+  }
+  
+  .facility-number-single {
+    font-size: 2.5rem;
+  }
+  
+  .facility-label-single {
+    font-size: 1rem;
+  }
+  
+  .facility-divider-single {
+    height: 50px;
+    margin: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .facility-item-single {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .facility-number-single {
+    font-size: 2.25rem;
+  }
+  
+  .facility-label-single {
+    font-size: 0.95rem;
+  }
+  
+  .facility-divider-single {
+    display: none !important;
+  }
+  
+  /* On mobile, show 2x2 grid */
+  .facilities-single-line .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .facilities-single-line .col-md-6 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .facility-item-single {
+    padding: 0.75rem;
+  }
+  
+  .facility-number-single {
+    font-size: 2rem;
+  }
+  
+  .facility-label-single {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for facility items */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.facility-item-single {
+  animation: countUp 0.6s ease-out;
+}
+
+/* Student Services Accordion Styles */
+.services-accordion {
+  background: white;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border: 1px solid #e9ecef;
+  border-bottom: none;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.accordion-item:last-child {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.accordion-item:hover {
+  background: #f8f9fa;
+}
+
+.accordion-header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.accordion-header.active {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.accordion-header.active .accordion-icon {
+  background: white;
+  color: var(--primary-blue);
+}
+
+.accordion-header.active .accordion-title {
+  color: white;
+}
+
+.accordion-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.accordion-icon svg {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.accordion-header.active .accordion-icon svg {
+  color: var(--primary-blue);
+}
+
+.accordion-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  color: var(--primary-blue);
+  transition: color 0.3s ease;
+}
+
+.accordion-arrow {
+  transition: transform 0.3s ease;
+  color: var(--primary-blue);
+}
+
+.accordion-header.active .accordion-arrow {
+  color: white;
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.accordion-body {
+  padding: 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.accordion-body p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--secondary-blue);
+}
+
+.accordion-body strong {
+  color: var(--primary-blue);
+}
+
+.accordion-body a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.accordion-body a:hover {
+  text-decoration: underline;
+}
+
+.accordion-body em {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-accordion {
+    padding: 1.5rem;
+    margin: 0 -15px;
+    border-radius: 0;
+  }
+  
+  .accordion-header {
+    padding: 1.25rem 1rem;
+  }
+  
+  .accordion-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+  }
+  
+  .accordion-icon svg {
+    font-size: 1rem;
+  }
+  
+  .accordion-title {
+    font-size: 1.1rem;
+  }
+  
+  .accordion-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Animation improvements */
+.accordion-item {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Facilities Page Enhanced Styles */
+.lab-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.lab-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+  border-color: var(--primary-blue);
+}
+
+.lab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.lab-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lab-icon svg {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.lab-status {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.lab-specs .spec-item {
+  padding: 0.25rem 0;
+}
+
+.feature-badge {
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  background: transparent;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.operating-hours-card {
+  background: white;
+  border-left: 4px solid var(--accent-gold);
+}
+
+.time-slot {
+  transition: background-color 0.3s ease;
+}
+
+.time-slot:hover {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.info-card {
+  background: white;
+  border: 1px solid #e9ecef;
+}
+
+.info-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Modal Enhancements */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+}
+
+.modal-header {
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.lab-details table td {
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+.lab-details table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Quick Stats Section */
+.bg-primary-custom {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lab-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .lab-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .lab-icon svg {
+    font-size: 1rem;
+  }
+  
+  .hero-section .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Animation for modal */
+.modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hover effects for cards */
+.lab-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-gold));
+  border-radius: 12px 12px 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lab-card:hover::before {
+  opacity: 1;
+}
+/* Facilities Page Enhanced Styles */
+.lab-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  height: 100%;
+}
+
+.lab-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+  border-color: var(--primary-blue);
+}
+
+.lab-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.lab-image {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.lab-card:hover .lab-image {
+  transform: scale(1.05);
+}
+
+.lab-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.lab-badge {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.lab-specs .spec-item {
+  padding: 0.25rem 0;
+}
+
+.feature-badge {
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  background: transparent;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Modal Enhancements */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+}
+
+.modal-header {
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.lab-details table td {
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+
+.lab-details table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Quick Stats Section */
+.bg-primary-custom {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lab-image-container {
+    height: 180px;
+  }
+  
+  .hero-section .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Animation for modal */
+.modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Ensure all cards have same height */
+.lab-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.lab-specs {
+  flex-grow: 1;
+}
+
+/* Button styles for external links */
+.btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
