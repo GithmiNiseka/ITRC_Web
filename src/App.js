@@ -28,9 +28,11 @@ function App() {
             <Route path="/student-services" element={<StudentServices />} />
             <Route path="/staff-services" element={<StaffServices />} />
             <Route path="/facilities" element={<Facilities />} />
+            {/* Add this catch-all route */}
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
-          <CustomChatbot />
+        <CustomChatbot />
         <Footer />
       </div>
     </Router>
